@@ -1,0 +1,131 @@
+//apply plugin: 'com.android.application'
+//
+//apply plugin: 'kotlin-android'
+//
+//apply plugin: 'org.jetbrains.kotlin.android.extensions'
+//
+//apply plugin: "androidx.navigation.safeargs.kotlin"
+//
+//apply plugin: 'kotlin-kapt'
+//
+//apply plugin: 'com.google.gms.google-services'
+//
+
+plugins{
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.android.secrets-gradle-plugin' version '1.1.0'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.example.expensemanager"
+        minSdkVersion 24
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes.each{
+        it.buildConfigField 'String', 'MY_API_KEY', MY_API_KEY
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+}
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+//    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.10'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'androidx.fragment:fragment-ktx:1.5.5'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    //room related
+    implementation 'androidx.room:room-runtime:2.5.0'
+    kapt 'androidx.room:room-compiler:2.5.0'
+    implementation 'androidx.room:room-ktx:2.5.0'
+
+    //Layout related
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+
+    // Material design
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0-alpha06'
+    implementation 'com.google.android.material:material:1.9.0-alpha01'
+
+    // For Card view
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // Chart and graph library
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    // app drawer //noinspection GradleCompatible
+    //  implementation 'com.android.support:design:28.0.0'
+
+    // google sign in button
+    implementation 'com.google.android.gms:play-services-auth:20.4.1'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.2.0')
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+    // google buttons
+//  implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
+    implementation 'com.github.TutorialsAndroid:GButton:v1.0.19'
+
+    //Image
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    //Network
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //Times Formater
+    implementation 'org.ocpsoft.prettytime:prettytime:5.0.6.Final'
+
+    // for refresh layout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+}
