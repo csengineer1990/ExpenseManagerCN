@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.expensemanager.R
 import kotlinx.android.synthetic.main.fragment_saved_profile.*
 
+@Suppress("DEPRECATION", "RedundantOverride")
 class SavedProfileFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

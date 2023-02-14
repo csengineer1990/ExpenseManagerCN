@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION", "RedundantSamConstructor")
+
 package com.example.expensemanager.ui.transactionDetails
 
 import android.app.DatePickerDialog
@@ -19,6 +21,7 @@ import kotlinx.android.synthetic.main.fragment_transaction_detail.*
 import java.text.SimpleDateFormat
 import java.util.*
 
+@Suppress("UNUSED_PARAMETER")
 class TransactionDetailFragment : Fragment() {
 
     private lateinit var viewModel: TransactionDetailViewModel
@@ -55,7 +58,7 @@ class TransactionDetailFragment : Fragment() {
 
         fromdate.isEnabled = false
         todate.isEnabled = false
-        recurring_transaction.setOnCheckedChangeListener { buttonView, isChecked ->
+        recurring_transaction.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 fromdate.isEnabled = true
                 todate.isEnabled = true

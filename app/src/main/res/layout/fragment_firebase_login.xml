@@ -20,7 +20,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -32,7 +33,7 @@
 
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
-                android:hint="Email"
+                android:hint="@string/email1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/progressBar"
@@ -41,7 +42,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -53,7 +55,7 @@
 
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
-                android:hint="Password"
+                android:hint="@string/password1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/firebaseEmailLogin"
@@ -71,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
                 android:background="@drawable/my_button"
-                android:text="Login"
+                android:text="@string/login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +87,7 @@
 
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/my_button"
-                android:text="NOT REGISTERED? CLICK HERE TO REGISTER"
+                android:text="@string/not_registered_click_here_to_register"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
@@ -127,7 +129,8 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/download" />
+                        android:src="@drawable/download"
+                        android:contentDescription="@string/todo1" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -138,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="52dp"
-                android:text="Login In as Guest"
+                android:text="@string/login_in_as_guest"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.507"
                 app:layout_constraintStart_toStartOf="parent"

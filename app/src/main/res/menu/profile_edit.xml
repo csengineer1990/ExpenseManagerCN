@@ -5,8 +5,8 @@
 
     <item
         android:id="@+id/edit_pencil"
-        android:contentDescription="You can edit transaction"
+        android:contentDescription="@string/you_can_edit_transaction"
         android:icon="@drawable/ic_baseline_edit"
-        android:title="Edit Transaction"
+        android:title="@string/edit_transaction"
         app:showAsAction="ifRoom" />
 </menu>

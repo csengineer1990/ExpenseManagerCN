@@ -5,15 +5,15 @@
 
     <item
         android:id="@+id/delete"
-        android:contentDescription="You can edit transaction"
+        android:contentDescription="@string/you_can_edit_transaction1"
         android:icon="@drawable/ic_baseline_delete"
-        android:title="Edit Transaction"
+        android:title="@string/edit_transaction1"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/edit_pen"
-        android:contentDescription="You can edit transaction"
+        android:contentDescription="@string/you_can_edit_transaction2"
         android:icon="@drawable/ic_baseline_edit"
-        android:title="Edit Transaction"
+        android:title="@string/edit_transaction2"
         app:showAsAction="ifRoom" />
 </menu>

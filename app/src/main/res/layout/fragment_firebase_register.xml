@@ -18,7 +18,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -30,7 +31,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +41,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -52,7 +54,7 @@
 
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
-                android:hint="Password"
+                android:hint="@string/password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/firebaseEmailRegister"
@@ -61,7 +63,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -71,7 +74,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
                 android:background="@drawable/my_button"
-                android:text="Register"
+                android:text="@string/register"
+                android:textColor="#5E35B1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +87,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
                 android:background="@drawable/my_button"
-                android:text="ALREADY REGISTERED? CLICK HERE TO LOGIN"
+                android:text="@string/already_registered_click_here_to_login"
+                android:textColor="#5E35B1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/register" />
@@ -98,7 +103,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/progressBar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UnknownIdInLayout">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="100dp"
@@ -110,7 +116,8 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/download" />
+                        android:src="@drawable/download"
+                        android:contentDescription="@string/todo" />
 
                 </androidx.cardview.widget.CardView>
 

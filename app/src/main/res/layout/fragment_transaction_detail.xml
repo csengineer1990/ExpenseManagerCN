@@ -33,7 +33,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -44,7 +44,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="72dp"
                 android:layout_marginEnd="25dp"
-                android:hint="Transaction Name*"
+                android:hint="@string/transaction_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -66,7 +67,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="25dp"
-                android:hint="Amount*"
+                android:hint="@string/amountText"
                 app:layout_constraintEnd_toEndOf="@+id/TransactionName"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/TransactionName"
@@ -76,7 +77,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textColorHint="#757575"
+                    tools:ignore="VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -89,17 +92,19 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="25dp"
                 android:clickable="true"
-                android:hint="Transaction Date*"
+                android:hint="@string/transaction_date"
                 app:layout_constraintEnd_toEndOf="@+id/etamount"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/etamount"
                 app:layout_constraintTop_toBottomOf="@+id/etamount"
-                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
+                android:focusable="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -109,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="16dp"
-                android:text="Recurring Transaction"
+                android:text="@string/recurring_transaction"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dateselect" />
 
@@ -121,16 +126,18 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="16dp"
                 android:editable="false"
-                android:hint="From Date"
+                android:hint="@string/from_date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recurring_transaction"
-                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
+                tools:ignore="Deprecated">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#757575" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -140,6 +147,7 @@
                 android:layout_height="63dp"
                 android:layout_marginTop="16dp"
                 android:autofillHints="Select Transaction Type"
+                android:contentDescription="@string/paymenttype"
                 app:layout_constraintBottom_toBottomOf="@+id/selectcategory"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.489"
@@ -155,18 +163,20 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="25dp"
                 android:editable="false"
-                android:hint="To Date"
+                android:hint="@string/to_date"
                 app:layout_constraintBottom_toBottomOf="@+id/fromdate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/fromdate"
                 app:layout_constraintVertical_bias="0.0"
-                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
+                tools:ignore="Deprecated">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#757575" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -191,7 +201,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="25dp"
-                android:hint="Transaction Type"
+                android:hint="@string/transaction_type"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -200,7 +210,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -213,7 +224,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="25dp"
                 android:gravity="center"
-                android:hint="Comment"
+                android:hint="@string/commentTextB"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -223,7 +234,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="#757575"
+                    tools:ignore="VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -232,7 +245,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
                 android:backgroundTint="@color/FavRed"
-                android:text="Expense"
+                android:text="@string/expense"
+                android:textColor="#5E35B1"
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="@+id/income"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -245,7 +259,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:backgroundTint="@color/green"
-                android:text="income"
+                android:text="@string/incomeBtn"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toStartOf="@+id/expense"
                 app:layout_constraintHorizontal_bias="0.301"

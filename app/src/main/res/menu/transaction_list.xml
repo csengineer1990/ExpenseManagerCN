@@ -5,22 +5,22 @@
 
     <item
         android:id="@+id/profile"
-        android:contentDescription="You can edit transaction"
+        android:contentDescription="@string/you_can_edit_transaction3"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="Edit Transaction"
+        android:title="@string/edit_transaction3"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/calender_view"
-        android:contentDescription="You can view calender "
+        android:contentDescription="@string/you_can_view_calender"
         android:icon="@drawable/ic_baseline_calendar_today_24"
-        android:title="calender Transaction"
+        android:title="@string/calender_transaction"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/news_click"
-        android:contentDescription="You can view calender "
+        android:contentDescription="@string/you_can_view_calender1"
         android:icon="@drawable/ic_baseline_tv_24"
-        android:title="calender Transaction"
+        android:title="@string/calender_transaction1"
         app:showAsAction="ifRoom" />
 </menu>

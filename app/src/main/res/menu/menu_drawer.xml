@@ -5,16 +5,16 @@
         <item
             android:id="@+id/dashboard"
             android:icon="@drawable/ic_ashboard"
-            android:title="Dashboard" />
+            android:title="@string/dashboard" />
 
         <item
             android:id="@+id/profile"
             android:icon="@drawable/ic_person"
-            android:title="Profile" />
+            android:title="@string/profile" />
         <item
             android:id="@+id/aboutApp"
             android:icon="@drawable/ic_info"
-            android:title="About App" />
+            android:title="@string/about_app" />
     </group>
 
 

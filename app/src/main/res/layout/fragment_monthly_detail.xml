@@ -25,7 +25,8 @@
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/addAppBarMonthly"
@@ -52,7 +53,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/sahi"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <androidx.cardview.widget.CardView
@@ -68,7 +69,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextSizeCheck">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -81,7 +83,7 @@
                         android:layout_height="0dp"
                         android:layout_marginStart="2dp"
                         android:layout_marginTop="8dp"
-                        android:text="Net Balance"
+                        android:text="@string/net_balance1"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="00"
+                        android:text="@string/_001"
                         android:textSize="32sp"
                         app:layout_constraintEnd_toEndOf="@+id/amount_text2"
                         app:layout_constraintHorizontal_bias="0.58"
@@ -143,7 +145,8 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:listitem="@layout/list_item" />
+                        tools:listitem="@layout/list_item"
+                        tools:ignore="UnusedAttribute" />
 
                     <!--                    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
                     <!--                        android:id="@+id/add_transaction"-->
@@ -169,7 +172,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="238dp"
                 android:layout_marginBottom="8dp"
-                android:text="Transactions This Month"
+                android:text="@string/transactions_this_month"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/cardView2"
@@ -184,7 +187,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="69dp"
                 android:layout_marginBottom="14dp"
-                android:text="Hi, "
+                android:text="@string/hi1"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/cardView1"
@@ -195,7 +198,7 @@
                 android:id="@+id/name_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shivam"
+                android:text="@string/Roshan"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView6"
